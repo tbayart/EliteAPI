@@ -21,6 +21,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Latitude")]
         public double Latitude { get; private set; }
+            
+        [JsonProperty("DistFromStarLS")]
+        public double DistanceFromStarInLightSeconds { get; private set; }
 
         [JsonProperty("Docked")]
         public bool IsDocked { get; private set; }
@@ -28,7 +31,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Taxi")]
         public bool IsInTaxi { get; private set; }
 
-        [JsonProperty("MultiCrew")] 
+        [JsonProperty("Multicrew")] 
         public bool IsInMultiCrew { get; private set; }
         
         [JsonProperty("InSRV")] 
@@ -163,16 +166,25 @@ namespace EliteAPI.Event.Models
             public double MyReputation { get; private set; }
 
             [JsonProperty("ActiveStates", NullValueHandling = NullValueHandling.Ignore)]
-            public IReadOnlyList<ActiveStateInfo> ActiveStates { get; private set; }
+            public IReadOnlyList<FactionStateInfo> ActiveStates { get; private set; }
+
+            [JsonProperty("RecoveringStates", NullValueHandling = NullValueHandling.Ignore)]
+            public IReadOnlyList<FactionStateInfo> RecoveringStates { get; private set; }
+
+            [JsonProperty("PendingStates", NullValueHandling = NullValueHandling.Ignore)]
+            public IReadOnlyList<FactionStateInfo> PendingStates { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-        public class ActiveStateInfo
+        public class FactionStateInfo
         {
-            internal ActiveStateInfo() { }
+            internal FactionStateInfo() { }
 
             [JsonProperty("State")]
             public string State { get; private set; }
+
+            [JsonProperty("Trend")]
+            public long Trend { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

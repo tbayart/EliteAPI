@@ -52,9 +52,14 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Reward")]
         public long Reward { get; private set; }
 
+        [JsonProperty("KillCount")]
+        public int KillCount { get; private set; }
+
         [JsonProperty("FactionEffects")]
         public IReadOnlyList<FactionEffectInfo> FactionEffectInfos { get; private set; }
 
+        [JsonProperty("MaterialsReward")]
+        public IReadOnlyList<MaterialReward> MaterialsReward { get; private set; }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class FactionEffectInfo
@@ -106,8 +111,28 @@ namespace EliteAPI.Event.Models
             [JsonProperty("Influence")]
             public string Influence { get; private set; }
         }
-    }
 
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class MaterialReward
+        {
+            internal MaterialReward() { }
+
+            [JsonProperty("Name")]
+            public string Name { get; private set; }
+
+            [JsonProperty("Name_Localised")]
+            public string NameLocalised { get; private set; }
+
+            [JsonProperty("Category")]
+            public string Category { get; private set; }
+
+            [JsonProperty("Category_Localised")]
+            public string CategoryLocalised { get; private set; }
+
+            [JsonProperty("Count")]
+            public int Count { get; private set; }
+        }
+    }
 }
 
 namespace EliteAPI.Event.Handler

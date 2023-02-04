@@ -16,6 +16,9 @@ namespace EliteAPI.Event.Models
     {
         internal DisembarkEvent() { }
 
+        [JsonProperty("ID")]
+        public int Id { get; private set; }
+
         [JsonProperty("SRV")]
         public bool IsSrv { get; private set; }
 

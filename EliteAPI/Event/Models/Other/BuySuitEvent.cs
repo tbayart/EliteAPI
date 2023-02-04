@@ -25,7 +25,7 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Price")]
         public long Price { get; private set; }
 
-        [JsonProperty("SuitId")]
+        [JsonProperty("SuitID")]
         public string SuitId { get; private set; }
     }
 }

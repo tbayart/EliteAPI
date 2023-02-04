@@ -136,6 +136,12 @@ namespace EliteAPI.Event.Models
         [JsonProperty("ReserveLevel")]
         public string ReserveLevel { get; private set; }
 
+        [JsonProperty("AscendingNode")]
+        public double AscendingNode { get; private set; }
+
+        [JsonProperty("MeanAnomaly")]
+        public double MeanAnomaly { get; private set; }
+
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
         public class ParentInfo
         {
@@ -143,6 +149,12 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("Null")]
             public long Null { get; private set; }
+
+            [JsonProperty("Ring")]
+            public int Ring { get; private set; }
+
+            [JsonProperty("Star")]
+            public int Star { get; private set; }
         }
 
         [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

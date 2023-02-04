@@ -21,8 +21,14 @@ namespace EliteAPI.Event.Models
         [JsonProperty("AwardingFaction")]
         public string AwardingFaction { get; private set; }
 
+        [JsonProperty("AwardingFaction_Localised")]
+        public string AwardingFactionLocalised { get; private set; }
+
         [JsonProperty("VictimFaction")]
         public string VictimFaction { get; private set; }
+
+        [JsonProperty("VictimFaction_Localised")]
+        public string VictimFactionLocalised { get; private set; }
     }
 
 }

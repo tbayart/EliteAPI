@@ -55,6 +55,12 @@ namespace EliteAPI.Event.Models
         [JsonProperty("StationEconomies")]
         public IReadOnlyList<StationEconomyInfo> StationEconomies { get; private set; }
 
+        [JsonProperty("StationState")]
+        public string StationState { get; private set; }
+
+        [JsonProperty("CockpitBreach")]
+        public bool HasCockpitBreach { get; private set; }
+
         [JsonProperty("DistFromStarLS")]
         public double DistanceFromStarInLightSeconds { get; private set; }
 

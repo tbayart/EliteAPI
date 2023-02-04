@@ -10,7 +10,6 @@ using ProtoBuf;
 
 namespace EliteAPI.Event.Models
 {
-
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class LoadoutEvent : EventBase<LoadoutEvent>
     {
@@ -55,6 +54,9 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Rebuy")]
         public long Rebuy { get; private set; }
 
+        [JsonProperty("Hot")]
+        public bool IsHot { get; private set; }
+
         [JsonProperty("Modules")]
         public IReadOnlyList<ModuleInfo> Modules { get; private set; }
 
@@ -85,7 +87,7 @@ namespace EliteAPI.Event.Models
             public bool IsOn { get; private set; }
 
             [JsonProperty("Priority")]
-            public long Priority { get; private set; }
+            public int Priority { get; private set; }
 
             [JsonProperty("Health")]
             public double Health { get; private set; }
@@ -142,10 +144,9 @@ namespace EliteAPI.Event.Models
             public double OriginalValue { get; private set; }
 
             [JsonProperty("LessIsGood")]
-            public long LessIsGood { get; private set; }
+            public bool LessIsGood { get; private set; }
         }
     }
-
 }
 
 namespace EliteAPI.Event.Handler

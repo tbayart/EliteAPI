@@ -59,6 +59,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("SubsystemHealth")]
         public double SubsystemHealth { get; private set; }
+
+        [JsonProperty("Bounty")]
+        public int Bounty { get; private set; }
     }
 
 }

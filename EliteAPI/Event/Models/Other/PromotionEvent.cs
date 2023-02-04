@@ -17,6 +17,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Empire")]
         public long Empire { get; private set; }
+
+        [JsonProperty("Combat")]
+        public int Combat { get; private set; }
     }
 
 }

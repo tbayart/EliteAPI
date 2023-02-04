@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections.Generic;
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
 
@@ -23,8 +23,22 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Faction")]
         public string Faction { get; private set; }
-    }
 
+        [JsonProperty("Factions")]
+        public IReadOnlyList<FactionVoucher> Factions { get; private set; }
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class FactionVoucher
+        {
+            internal FactionVoucher() { }
+
+            [JsonProperty("Amount")]
+            public int Amount { get; private set; }
+
+            [JsonProperty("Faction")]
+            public string Faction { get; private set; }
+        }
+    }
 }
 
 namespace EliteAPI.Event.Handler

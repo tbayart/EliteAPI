@@ -29,6 +29,8 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("BrokerPercentage")]
         public double BrokerPercentage { get; internal set; }
+
+        public bool AllFines { get; set; }
     }
 
 }

@@ -17,6 +17,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("HullRepaired")]
         public double HullRepaired { get; private set; }
+
+        [JsonProperty("CockpitRepaired")]
+        public double CockpitRepaired { get; private set; }
     }
 
 }

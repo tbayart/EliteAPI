@@ -26,6 +26,27 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("IsStation")]
         public bool IsStation { get; private set; }
+
+        [JsonProperty("USSType")]
+        public string USSType { get; private set; }
+
+        [JsonProperty("USSType_Localised")]
+        public string USSTypeLocalised { get; private set; }
+
+        [JsonProperty("SpawningState")]
+        public string SpawningState { get; private set; }
+
+        [JsonProperty("SpawningState_Localised")]
+        public string SpawningStateLocalised { get; private set; }
+
+        [JsonProperty("SpawningFaction")]
+        public string SpawningFaction { get; private set; }
+
+        [JsonProperty("ThreatLevel")]
+        public int ThreatLevel { get; private set; }
+
+        [JsonProperty("TimeRemaining")]
+        public double TimeRemaining { get; private set; }
     }
 
 }

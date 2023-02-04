@@ -353,9 +353,9 @@ namespace EliteAPI.Status.Processor
             {
                 if (property.NeedsUpdate(rawValue))
                 {
-                    var value = rawValue.ToString();
-                    if (Type.GetTypeCode(rawValue.GetType()) == TypeCode.Object)
-                        value = JsonConvert.SerializeObject(rawValue);
+                    var value = Type.GetTypeCode(typeof(T)) == TypeCode.Object
+                        ? JsonConvert.SerializeObject(rawValue)
+                        : rawValue;
 
                     _log.LogTrace("Invoking OnChange event for {name} ({value})", name, value);
                     property.Update(this, rawValue);
@@ -365,6 +365,7 @@ namespace EliteAPI.Status.Processor
             {
                 ex.Data.Add("Name", name);
                 _log.LogWarning(ex, "Could not invoke OnChange for {name}", name);
+                _log.LogWarning("{exception}", ex);
             }
         }
 

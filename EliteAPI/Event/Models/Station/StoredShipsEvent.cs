@@ -54,6 +54,18 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; private set; }
+
+        [JsonProperty("StarSystem")]
+        public string StarSystem { get; private set; }
+
+        [JsonProperty("ShipMarketID")]
+        public string ShipMarketId { get; private set; }
+
+        [JsonProperty("TransferPrice")]
+        public int TransferPrice { get; private set; }
+
+        [JsonProperty("TransferTime")]
+        public int TransferTime { get; private set; }
     }
 
 }

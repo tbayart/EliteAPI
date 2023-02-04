@@ -32,8 +32,13 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("EngineerModifications")]
         public string EngineerModifications { get; private set; }
-    }
 
+        [JsonProperty("MarketID")]
+        public string MarketId { get; private set; }
+
+        [JsonProperty("Hot")]
+        public bool IsHot { get; private set; }
+    }
 }
 
 namespace EliteAPI.Event.Handler

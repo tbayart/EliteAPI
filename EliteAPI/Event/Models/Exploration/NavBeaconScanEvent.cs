@@ -17,6 +17,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("NumBodies")]
         public long NumBodies { get; private set; }
+
+        [JsonProperty("SystemAddress")]
+        public string SystemAddress { get; private set; }
     }
 
 }

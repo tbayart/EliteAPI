@@ -38,6 +38,8 @@
         /// <summary>
         /// Warrant for arrest
         /// </summary>
-        Warrant
+        Warrant,
+
+        Thargoid,
     }
 }

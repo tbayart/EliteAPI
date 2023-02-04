@@ -50,6 +50,9 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("ModuleName_Localised")]
             public string ModuleNameLocalised { get; private set; }
+
+            [JsonProperty("Class")]
+            public int Class { get; private set; }
         }
     }
 }

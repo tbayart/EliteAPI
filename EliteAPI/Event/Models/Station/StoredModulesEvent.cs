@@ -69,6 +69,9 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Quality", NullValueHandling = NullValueHandling.Ignore)]
         public double? Quality { get; private set; }
+
+        [JsonProperty("InTransit")]
+        public bool IsInTransit { get; private set; }
     }
 
 }

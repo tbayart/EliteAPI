@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 using EliteAPI.Event.Models;
 using EliteAPI.Event.Models.Abstractions;
@@ -9,7 +10,6 @@ using ProtoBuf;
 
 namespace EliteAPI.Event.Models
 {
-
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class LoadGameEvent : EventBase<LoadGameEvent>
     {
@@ -59,8 +59,13 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Loan")]
         public long Loan { get; private set; }
-    }
 
+        [JsonProperty("StartDead")]
+        public bool IsDead { get; private set; }
+
+        [JsonProperty("Group")]
+        public string Group { get; private set; }
+    }
 }
 
 namespace EliteAPI.Event.Handler

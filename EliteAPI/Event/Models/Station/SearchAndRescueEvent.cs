@@ -18,13 +18,18 @@ namespace EliteAPI.Event.Models
         [JsonProperty("Name")]
         public string Name { get; private set; }
 
+        [JsonProperty("Name_Localised")]
+        public string NameLocalised { get; private set; }
+
         [JsonProperty("Count")]
         public long Count { get; private set; }
 
         [JsonProperty("Reward")]
         public long Reward { get; private set; }
-    }
 
+        [JsonProperty("MarketID")]
+        public string MarketId { get; private set; }
+    }
 }
 
 namespace EliteAPI.Event.Handler

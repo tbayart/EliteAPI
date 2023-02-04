@@ -23,8 +23,13 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("NonBodyCount")]
         public long NonBodyCount { get; private set; }
-    }
 
+        [JsonProperty("SystemName")]
+        public string SystemName { get; set; }
+
+        [JsonProperty("SystemAddress")]
+        public string SystemAddress { get; set; }
+    }
 }
 
 namespace EliteAPI.Event.Handler

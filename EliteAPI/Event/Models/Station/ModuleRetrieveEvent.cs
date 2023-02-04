@@ -35,8 +35,22 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("Hot")]
         public bool IsHot { get; private set; }
-    }
 
+        [JsonProperty("EngineerModifications")]
+        public string EngineerModifications { get; private set; }
+
+        [JsonProperty("Level")]
+        public int Level { get; private set; }
+
+        [JsonProperty("Quality")]
+        public decimal Quality { get; private set; }
+
+        [JsonProperty("SwapOutItem")]
+        public string SwapOutItem { get; private set; }
+
+        [JsonProperty("SwapOutItem_Localised")]
+        public string SwapOutItemLocalised { get; private set; }
+    }
 }
 
 namespace EliteAPI.Event.Handler

@@ -35,6 +35,12 @@ namespace EliteAPI.Event.Models
 
         [JsonProperty("ShipID")]
         public string ShipId { get; private set; }
+
+        [JsonProperty("StoredItem")]
+        public string StoredItem { get; private set; }
+
+        [JsonProperty("StoredItem_Localised")]
+        public string StoredItemLocalised { get; private set; }
     }
 
 }

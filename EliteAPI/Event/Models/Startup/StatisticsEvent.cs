@@ -166,6 +166,9 @@ namespace EliteAPI.Event.Models
 
             [JsonProperty("TG_SCOUT_COUNT")]
             public long TgScoutCount { get; private set; }
+
+            [JsonProperty("TG_ENCOUNTER_IMPRINT")]
+            public int TgEncounterImprint { get; private set; }
         }
 
 

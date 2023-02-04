@@ -31,6 +31,9 @@ namespace EliteAPI.Event.Models
         [JsonProperty("VictimFaction")]
         public string VictimFaction { get; private set; }
 
+        [JsonProperty("VictimFaction_Localised")]
+        public string VictimFactionLocalised { get; private set; }
+
         [JsonProperty("SharedWithOthers")]
         public long SharedWithOthers { get; private set; }
 
