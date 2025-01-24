@@ -40,6 +40,14 @@
         /// </summary>
         Warrant,
 
+        /// <summary>
+        /// Target is Thargoïd vessel
+        /// </summary>
         Thargoid,
+
+        /// <summary>
+        /// Ship is an allied
+        /// </summary>
+        Allied,
     }
 }
