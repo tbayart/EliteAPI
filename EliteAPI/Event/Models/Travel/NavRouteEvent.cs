@@ -23,7 +23,7 @@ namespace EliteAPI.Event.Handler
     {
         public event EventHandler<NavRouteEvent> NavRouteEvent;
 
-        internal void InvokeNavRouteEventEvent(NavRouteEvent arg)
+        internal void InvokeNavRouteEvent(NavRouteEvent arg)
         {
             NavRouteEvent?.Invoke(this, arg);
         }
